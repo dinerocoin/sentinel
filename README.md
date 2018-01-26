@@ -4,9 +4,9 @@ An all-powerful toolset for Dinero.
 
 [![Build Status](https://travis-ci.org/dinerocoin/sentinel.svg?branch=master)](https://travis-ci.org/dinerocoin/sentinel)
 
-Sentinel is an autonomous agent for persisting, processing and automating Dinero V12.1 governance objects and tasks, and for expanded functions in the upcoming Dinero V13 release (Evolution).
+Sentinel is an autonomous agent for persisting, processing and automating Dinero V1.0.X governance objects and tasks, and for expanded functions in future releases of Dinero.
 
-Sentinel is implemented as a Python application that binds to a local version 12.1 dinerod instance on each Dinero V12.1 Masternode.
+Sentinel is implemented as a Python application that binds to a local version 1.0.X dinerod instance on each Dinero V1.0.X Masternode.
 
 This guide covers installing Sentinel onto an existing 1.0.X Masternode in Ubuntu 14.04 / 16.04.
 
@@ -23,7 +23,7 @@ Update system packages and ensure virtualenv is installed:
     $ sudo apt-get update
     $ sudo apt-get -y install python-virtualenv
 
-Make sure the local Dinero daemon running is at least version 12.1 (120100)
+Make sure the local Dinero daemon running is at least version 1.0.X
 
     $ dinero-cli getinfo | grep version
 
