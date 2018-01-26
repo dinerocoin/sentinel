@@ -43,9 +43,9 @@ def get_db_conn():
     # default values should be used unless you need a different config for development
     db_host = sentinel_cfg.get('db_host', '127.0.0.1')
     db_port = sentinel_cfg.get('db_port', None)
-    db_name = sentinel_cfg.get('db_name', 'sentinel')
-    db_user = sentinel_cfg.get('db_user', 'sentinel')
-    db_password = sentinel_cfg.get('db_password', 'sentinel')
+    db_name = sentinel_cfg.get('db_name', 'sentineldinero')
+    db_user = sentinel_cfg.get('db_user', 'sentineldinero')
+    db_password = sentinel_cfg.get('db_password', 'sentineldinero')
     db_charset = sentinel_cfg.get('db_charset', 'utf8mb4')
     db_driver = sentinel_cfg.get('db_driver', 'sqlite')
 
