@@ -2,13 +2,13 @@
 
 An all-powerful toolset for Dinero.
 
-[![Build Status](https://travis-ci.org/dineropay/sentinel.svg?branch=master)](https://travis-ci.org/dineropay/sentinel)
+[![Build Status](https://travis-ci.org/dinerocoin/sentinel.svg?branch=master)](https://travis-ci.org/dinerocoin/sentinel)
 
 Sentinel is an autonomous agent for persisting, processing and automating Dinero V12.1 governance objects and tasks, and for expanded functions in the upcoming Dinero V13 release (Evolution).
 
 Sentinel is implemented as a Python application that binds to a local version 12.1 dinerod instance on each Dinero V12.1 Masternode.
 
-This guide covers installing Sentinel onto an existing 12.1 Masternode in Ubuntu 14.04 / 16.04.
+This guide covers installing Sentinel onto an existing 1.0.X Masternode in Ubuntu 14.04 / 16.04.
 
 ## Installation
 
@@ -31,7 +31,7 @@ Make sure the local Dinero daemon running is at least version 12.1 (120100)
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/dineropay/sentinel.git && cd sentinel
+    $ git clone https://github.com/dinerocoin/sentinel.git && cd sentinel
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
@@ -64,24 +64,6 @@ An alternative (non-default) path to the `dinero.conf` file can be specified in 
 To view debug output, set the `SENTINEL_DEBUG` environment variable to anything non-zero, then run the script manually:
 
     $ SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py
-
-## Contributing
-
-Please follow the [DineroCore guidelines for contributing](https://github.com/dineropay/dinero/blob/v0.12.1.x/CONTRIBUTING.md).
-
-Specifically:
-
-* [Contributor Workflow](https://github.com/dineropay/dinero/blob/v0.12.1.x/CONTRIBUTING.md#contributor-workflow)
-
-    To contribute a patch, the workflow is as follows:
-
-    * Fork repository
-    * Create topic branch
-    * Commit patches
-
-    In general commits should be atomic and diffs should be easy to read. For this reason do not mix any formatting fixes or code moves with actual code changes.
-
-    Commit messages should be verbose by default, consisting of a short subject line (50 chars max), a blank line and detailed explanatory text as separate paragraph(s); unless the title alone is self-explanatory (like "Corrected typo in main.cpp") then a single title line is sufficient. Commit messages should be helpful to people reading your code in the future, so explain the reasoning for your decisions. Further explanation [here](http://chris.beams.io/posts/git-commit/).
 
 ### License
 
