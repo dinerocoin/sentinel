@@ -16,12 +16,12 @@ def test_dinerod():
     config_text = DineroConfig.slurp_config_file(config.dinero_conf)
     network = 'mainnet'
     is_testnet = False
-    genesis_hash = u'00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6'
+    genesis_hash = u'000009110a70cd2bf2cdcae9a8b1425bb074c7b7b08570c2c9f04fe8668c6589'
     for line in config_text.split("\n"):
         if line.startswith('testnet=1'):
             network = 'testnet'
             is_testnet = True
-            genesis_hash = u'00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c'
+            genesis_hash = u'000008a8a0d4d1490b99bc94122b023c72e8adf4adac2f00bc4d5344eb4548d7'
 
     creds = DineroConfig.get_rpc_creds(config_text, network)
     dinerod = DineroDaemon(**creds)
@@ -29,7 +29,7 @@ def test_dinerod():
 
     assert hasattr(dinerod, 'rpc_connection')
 
-    # Dinero testnet block 0 hash == 00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c
+    # Dinero testnet block 0 hash == 000009110a70cd2bf2cdcae9a8b1425bb074c7b7b08570c2c9f04fe8668c6589
     # test commands without arguments
     info = dinerod.rpc_command('getinfo')
     info_keys = [
