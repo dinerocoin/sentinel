@@ -1,0 +1,4 @@
+# OS specific and other
+.DS_Store
+docs/.DS_Store
+.keep
